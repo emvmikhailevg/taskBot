@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <javacord-version>3.8.0</javacord-version>
+    <telegram-bot-api-version>6.9.1</telegram-bot-api-version>
   </properties>
 
   <dependencies>
@@ -21,5 +24,28 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.javacord</groupId>
+      <artifactId>javacord</artifactId>
+      <version>3.8.0</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.github.pengrad</groupId>
+      <artifactId>java-telegram-bot-api</artifactId>
+      <version>6.9.1</version>
+    </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>16</source>
+          <target>16</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
