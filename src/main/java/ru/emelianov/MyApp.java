@@ -10,10 +10,11 @@ package ru.emelianov;
  * @author mikhailemv
  * @since 09.11.2023
  */
-public class MyApp
-{
+public class MyApp {
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        new MyTelegramBot().register(System.getProperty("telegramToken"));
+        new MyDiscordBot().register(System.getProperty("discordToken"));
     }
 }
